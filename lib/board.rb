@@ -22,7 +22,7 @@ class Board
   end
 
   def full?
-    self.cells.all?{ |sym| sym == "X" || sym == "O"} #iterates over cells array to see if X or O value has been assigned to all elememts in the array
+    self.cells.all?{ |token| token == "X" || token == "O"} #iterates over cells array to see if X or O value has been assigned to all elememts in the array
   end
 
   def turn_count
@@ -30,6 +30,7 @@ class Board
   end
 
   def taken?(input)
+    #(position(input) == "X" || position(input) == "O")
     !(position(input) == " " || position(input) == "")
   end
 
@@ -38,7 +39,7 @@ class Board
   end
 
   def update(input, player)
-    cells[input.to_i-1] = player.token
+    self.cells[input.to_i-1] = player.token
   end
 
 end
