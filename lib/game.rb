@@ -50,11 +50,12 @@ class Game
   end
   
   def turn
-  
+    input = ""
+    
   end 
 
   def play 
-  
+    
   end
 
 
